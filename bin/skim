@@ -3,4 +3,5 @@
 $:.unshift File.dirname(__FILE__) + '/../lib'
 require 'skim/command'
 
+Slim::Parser.default_options[:attr_list_delims] = {'(' => ')', '[' => ']'}
 Skim::Command.new(ARGV).run
